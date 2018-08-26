@@ -1,3 +1,9 @@
+#diceGame {
+    visibility: hidden;
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.2);
+}
+
 @media screen and (max-width:450px) {
     .column {
         width: 100;
