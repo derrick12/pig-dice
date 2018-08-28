@@ -1,5 +1,5 @@
 #diceGame {
-    visibility: hidden;
+    /*visibility: hidden;*/
     text-align: center;
     background-color: rgba(245, 245, 245, 0.2);
 }
@@ -28,7 +28,7 @@
 
 body {
     height: 100%;
-    background: url(https://wallpaper.wiki/wp-content/uploads/2017/05/Minimalist-Pictures-HD.jpg) no-repeat center center fixed;
+    background: url(http://crossfitunbroken.com/wp-content/uploads/2018/08/geometric-shape-wallpaper-cozy-shapes-abstract-wallpapers-page-uk-soclab-pertaining-to-8.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
