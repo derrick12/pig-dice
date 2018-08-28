@@ -57,6 +57,10 @@ body {
     text-align: center;
 }
 
+.h3 {
+    text-align: center;
+}
+
 .active {
     border: 2px solid greenyellow
 }
