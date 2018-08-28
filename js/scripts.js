@@ -69,6 +69,7 @@ $(function() {
         $("#displayScore2").text(player2.score);
         $("#displayTotal").text(total);
 
+        $("#player-names").hide();
         $("#diceGame").show();
     });
 
@@ -111,33 +112,32 @@ $(function() {
             switchPlayer(player2.name);
         }
     });
-
-    /*
-    function Player(first, second) {
-        this.firstPlayer = first;
-        this.secondPlayer = second;
-    }
-    */
-
-    /*
-
-    $(document).ready(function() {
-        $("form#player-names").submit(function(event) {
-            event.preventDefault();
-
-            var inputtedFirstPlayer = $("input#player1").val();
-            var inputtedSecondPlayer = $("input#player2").val();
-
-
-            var newPlayers = new Player(inputtedFirstPlayer, inputtedSecondPlayer);
-
-            
-            $("h2#name1").append("<span class='Player'>" + newPlayers.firstPlayer + "</span>");
-            $("h2#name2").append("<span class='Player'>" + newPlayers.secondPlayer + "</span>");
-
-            $("input#player1").val("");
-            $("input#player2").val("");
-
-        });
-         */
 });
+/*
+function Player(first, second) {
+    this.firstPlayer = first;
+    this.secondPlayer = second;
+}
+*/
+
+/*
+
+$(document).ready(function() {
+    $("form#player-names").submit(function(event) {
+        event.preventDefault();
+
+        var inputtedFirstPlayer = $("input#player1").val();
+        var inputtedSecondPlayer = $("input#player2").val();
+
+
+        var newPlayers = new Player(inputtedFirstPlayer, inputtedSecondPlayer);
+
+        
+        $("h2#name1").append("<span class='Player'>" + newPlayers.firstPlayer + "</span>");
+        $("h2#name2").append("<span class='Player'>" + newPlayers.secondPlayer + "</span>");
+
+        $("input#player1").val("");
+        $("input#player2").val("");
+
+    });
+     */
