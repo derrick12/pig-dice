@@ -21,7 +21,27 @@ Player.prototype.hold = function(total) {
     this.score += total;
 };
 
+Player.prototype.checkWin = function(total) {
+    return ((this.score + total) >= 100);
+};
 
+var player1 = new Player(null, 0, 1);
+var player2 = new Player(null, 0, 0);
+
+var switchPlayer = function(playerName) {
+    console.log(player1.name, playerName);
+    if (player1.name === playerName) {
+        player1.endTurn();
+        $("#score1").removeClass("active");
+        player2.startTurn()
+        $("#score2").addClass("active");
+    } else {
+        player2.endTurn();
+        $("#score2").removeClass("active");
+        player1.startTurn()
+        $("#score1").addClass("active");
+    }
+}
 
 
 //Front end logic
