@@ -1,5 +1,5 @@
 # Pig Dice Game.
-#### This is an application that determines the types of a triangle based on length inputs from the user. ,  24th August 2018.
+#### This is a game of chance by the use of a die. ,  24th August 2018.
 #### By Derrick Kariuki.
 ## Description
 This is a 2-player turn-based game of probability. Opponents accumulate points by rolling a die each turn until they either hit a one (and lose their points), or choose to hold and keep what they've aggregated.
