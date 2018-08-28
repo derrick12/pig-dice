@@ -43,6 +43,16 @@ var switchPlayer = function(playerName) {
     }
 }
 
+var resetGame = function() {
+    player1.name = null;
+    player2.name = null;
+    $("input#player1").val("");
+    $("input#player2").val("");
+    $("#score1-span").text("0");
+    $("#score2-span").text("0");
+    $("#total-span").text("0");
+    $("#diceGame").hide();
+}
 
 //Front end logic
 $(function() {
