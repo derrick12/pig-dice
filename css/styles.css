@@ -68,3 +68,7 @@ body {
 .passive {
     border: none;
 }
+
+.columnTotal {
+    text-align: center;
+}
