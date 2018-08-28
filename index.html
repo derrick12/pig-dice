@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
     <title>PIG DICE.</title>
 </head>
 
@@ -22,51 +21,67 @@
             <h1>Pig Dice.</h1>
         </div>
 
-        <form id="playernames">
+        <form id="player-names">
 
             <div class="row">
                 <div class="column">
                     <div class="form-group">
                         <p id="paragraph">Player One</p>
-                        <input type="text" class="form-control" id="player1">
+                        <input type="text" id="player1" class="form-control">
                     </div>
                 </div>
                 <div class="column">
                     <div class="form-group">
                         <p id="paragraph">Player Two</p>
-                        <input type="text" class="form-control" id="player2">
+                        <input type="text" id="player2" class="form-control">
                     </div>
                 </div>
             </div>
 
             <div class="buttonHolder">
-                <input id="button" type="button" value="Let's Play!" onclick="check();">
+                <button type="submit" class="btn">Play!</button>
             </div>
+
+
+            <!--
+            <div class="buttonHolder">
+                <input id="button" type="button" value="Let's Play!" onclick="letsPlay();">
+            </div>
+        -->
 
         </form>
 
-        <!-- The Game -->
+        <!--The Game-->
         <div id="diceGame" class="panel panel-info">
             <div class="panel-heading">
-                <h2 class="panel-title">PIG DICE!!</h2>
+                <h2 class="panel-title">Lets Play!!</h2>
             </div>
-            <div class="panel-body">
-                <ul>
-                    <li>
-                        <p id="comments"></p>
-                    </li>
-                    <li>
-                        <p id="displayScore"></p>
-                    </li>
-                    <img id="image">
-                </ul>
+
+            <div class="row">
+                <div class="column">
+                    <div class="panel-body">
+                        <h2 id="name1"></h2>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="panel-body">
+                        <h2 id="name2"></h2>
+                    </div>
+                </div>
+
+                <div id="columnTotal">
+                    <h4></h4>
+                    <span id="displayTotal"></span>
+                </div>
+
             </div>
 
             <div class="panel-footer">
-                <p>JavaScript Quiz!</p>
+                <p><i> Pig Dice </i></p>
             </div>
-        </div>
 
+        </div>
 
     </div>
 </body>
