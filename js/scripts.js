@@ -1,4 +1,8 @@
 //business logic
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function Player(first, second) {
     this.firstPlayer = first;
     this.secondPlayer = second;
@@ -27,5 +31,8 @@ $(document).ready(function() {
 
         $("input#player1").val("");
         $("input#player2").val("");
+
+
+
     });
 });
