@@ -72,6 +72,32 @@ $(function() {
         $("#diceGame").show();
     });
 
+    $("#roll").click(function() {
+        var dice = getRandom(1, 6);
+        $("#dice-value").text(dice);
+        if (dice !== 1) {
+            total += dice;
+            $("#displayTotal").text(total);
+            if (player1.turn && player1.checkWin(total)) {
+                player1.score += total;
+                alert(player1.name + " has won!!  score: " + player1.score);
+                resetGame();
+            } else if (player2.turn && player2.checkWin(total)) {
+                player2.score += total;
+                alert(player2.name + " has won!! score: " + player2.score);
+                resetGame()
+            }
+        } else {
+            total = 0;
+            $("#displayTotal").text(total);
+            if (player1.turn) {
+                switchPlayer(player1.name);
+            } else {
+                switchPlayer(player2.name);
+            }
+        }
+    });
+
     $("#hold").click(function() {
         if (player1.turn === 1) {
             player1.score += total;
