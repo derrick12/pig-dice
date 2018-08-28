@@ -57,50 +57,61 @@ var resetGame = function() {
 //Front end logic
 $(function() {
 
-            var total = 0;
+    var total = 0;
 
-            $("#letsPlay").click(function() {
-                player1.name = $("input#player1").val();
-                player2.name = $("input#player2").val();
+    $("#letsPlay").click(function() {
+        player1.name = $("input#player1").val();
+        player2.name = $("input#player2").val();
 
-                $("#name1").text(player1.name);
-                $("#name2").text(player2.name);
-                $("#displayScore1").text(player1.score);
-                $("#displayScore2").text(player2.score);
-                $("#displayTotal").text(total);
+        $("#name1").text(player1.name);
+        $("#name2").text(player2.name);
+        $("#displayScore1").text(player1.score);
+        $("#displayScore2").text(player2.score);
+        $("#displayTotal").text(total);
 
-                $("#diceGame").show();
-            });
+        $("#diceGame").show();
+    });
+
+    $("#hold").click(function() {
+        if (player1.turn === 1) {
+            player1.score += total;
+            $("#displayScore1").text(player1.score);
+            total = 0;
+            switchPlayer(player1.name);
+        } else {
+            player2.score += total;
+            $("#displayScore2").text(player2.score);
+            total = 0;
+            switchPlayer(player2.name);
+        }
+    });
+
+    /*
+    function Player(first, second) {
+        this.firstPlayer = first;
+        this.secondPlayer = second;
+    }
+    */
+
+    /*
+
+    $(document).ready(function() {
+        $("form#player-names").submit(function(event) {
+            event.preventDefault();
+
+            var inputtedFirstPlayer = $("input#player1").val();
+            var inputtedSecondPlayer = $("input#player2").val();
 
 
+            var newPlayers = new Player(inputtedFirstPlayer, inputtedSecondPlayer);
 
+            
+            $("h2#name1").append("<span class='Player'>" + newPlayers.firstPlayer + "</span>");
+            $("h2#name2").append("<span class='Player'>" + newPlayers.secondPlayer + "</span>");
 
-            /*
-            function Player(first, second) {
-                this.firstPlayer = first;
-                this.secondPlayer = second;
-            }
-            */
+            $("input#player1").val("");
+            $("input#player2").val("");
 
-            /*
-
-            $(document).ready(function() {
-                $("form#player-names").submit(function(event) {
-                    event.preventDefault();
-
-                    var inputtedFirstPlayer = $("input#player1").val();
-                    var inputtedSecondPlayer = $("input#player2").val();
-
-
-                    var newPlayers = new Player(inputtedFirstPlayer, inputtedSecondPlayer);
-
-                    
-                    $("h2#name1").append("<span class='Player'>" + newPlayers.firstPlayer + "</span>");
-                    $("h2#name2").append("<span class='Player'>" + newPlayers.secondPlayer + "</span>");
-
-                    $("input#player1").val("");
-                    $("input#player2").val("");
-
-                });
-            });
-            */
+        });
+         */
+});
